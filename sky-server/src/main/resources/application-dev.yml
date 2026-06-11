@@ -1,0 +1,33 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+sky:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: ${DB_HOST:localhost}
+    port: ${DB_PORT:3306}
+    database: ${DB_NAME:sky_take_out}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:680542}
+  alioss:
+    endpoint: ${OSS_ENDPOINT:oss-cn-beijing.aliyuncs.com}
+    access-key-id: ${OSS_ACCESS_KEY_ID:your-access-key-id}
+    access-key-secret: ${OSS_ACCESS_KEY_SECRET:your-access-key-secret}
+    bucket-name: ${OSS_BUCKET_NAME:your-bucket-name}
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PASSWORD:123456}
+    database: ${REDIS_DATABASE:10}
+  wechat:
+    appid: ${WECHAT_APPID:wxc9e64d45502ffb7a}
+    secret: ${WECHAT_SECRET:a7f7e55a622fd41424829cac1bdd7587}
+    mchid: ${WECHAT_MCHID:1561414331}
+    mchSerialNo: ${WECHAT_MCH_SERIAL_NO:4B3B3DC35414AD50B1B755BAF8DE9CC7CF407606}
+    privateKeyFilePath: ${WECHAT_PRIVATE_KEY_PATH:D:\pay\apiclient_key.pem}
+    apiV3Key: ${WECHAT_API_V3_KEY:CZBK51236435wxpay435434323FFDuv3}
+    weChatPayCertFilePath: ${WECHAT_PAY_CERT_PATH:D:\pay\wechatpay_166D96F876F45C7D07CE98952A96EC980368ACFC.pem}
+    notifyUrl: ${WECHAT_NOTIFY_URL:https://58869fb.r2.cpolar.top/notify/paySuccess}
+    refundNotifyUrl: ${WECHAT_REFUND_NOTIFY_URL:https://58869fb.r2.cpolar.top/notify/refundSuccess}
